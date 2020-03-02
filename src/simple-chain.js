@@ -4,7 +4,7 @@ const chainMaker = {
     return this.chain.length;
   },
   addLink(value) {
-    this.chain.push(`( ${value} )`)
+    this.chain.push(`( ${value} )`);
     return this
   },
   removeLink(position) {
@@ -13,7 +13,7 @@ const chainMaker = {
       throw 'bad value';
     }
     if (position > this.chain.length || position <= 0) {
-      this.chain = []
+      this.chain = [];
       throw 'bad value';
     }
     this.chain.splice(position - 1, 1);
@@ -25,7 +25,7 @@ const chainMaker = {
   },
   finishChain() {
     let rock = this.chain.join('~~');
-    this.chain = []
+    this.chain = [];
     return rock
   }
 };
